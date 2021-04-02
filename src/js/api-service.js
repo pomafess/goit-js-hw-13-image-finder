@@ -5,8 +5,8 @@ export default class ApiService  {
     }
     fetchArticles() {
         console.log(this);
-        const apyKey = "20957538-039948fc53da0772e609db9c3";
-        const url = `https://pixabay.com/api/?image_type=photo&orientation=horizontal&q=${this.searchQuery}&page=${this.page}&per_page=12&key=${apyKey}`;
+        const API_KEY = "20957538-039948fc53da0772e609db9c3";
+        const url = `https://pixabay.com/api/?image_type=photo&orientation=horizontal&q=${this.searchQuery}&page=${this.page}&per_page=12&key=${API_KEY}`;
     return fetch(url)
         .then(response => response.json())
         .then(data => {

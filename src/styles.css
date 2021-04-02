@@ -9,7 +9,12 @@ html {
 }
 
 body {
+  max-width: 1200px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+.js-gallery {
+}
+.list-item {
 }

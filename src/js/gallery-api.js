@@ -17,15 +17,28 @@ function onSearch(e) {
     apiService.query = e.currentTarget.elements.query.value;
     apiService.resetPage();
 
-    apiService.fetchArticles().then(addMarkup);
+    apiService.fetchArticles().then(hits => {
+        clearGallery();
+        addMarkup(hits)
+    });
     
 }
 
 function onLoadmore() {
     apiService.fetchArticles().then(addMarkup);
+    window.scrollTo(0, 1000);
+
+    window.scrollTo({
+      top: 3600,
+      behavior: 'smooth',
+    });
     
 }
 function addMarkup(hits) {
     refs.gallery.insertAdjacentHTML('beforeend', template(hits));
 
+}
+
+function clearGallery() {
+    refs.gallery.innerHTML = '';
 }
